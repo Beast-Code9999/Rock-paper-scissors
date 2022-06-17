@@ -1,3 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
-    
+    margin: 0;
+    background: #eee;
+    font-family: Besley, serif;
+    background: #000000;
+}
+
+header {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(0, 255, 136);
+    background-color: #112013;
+    padding: 16px;
+}
+
+section.section-choice {
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 32px 8px;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 32px;
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.box div h2 {
+    margin: 0px;
+}
+
+.selection {
+    width: 105px;
+    height: auto;
+}
+
+
+section.section-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(46, 28, 0, 0.158);
+}
+
+section.section-result div h1 {
+    color: white;
+}
+
+.result-img-container {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    background-color: #2c7235;
 }
