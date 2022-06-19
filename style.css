@@ -30,7 +30,7 @@ section.section-choice {
     background: rgba(255, 255, 255, 0.3);
     padding: 32px;
     width: 500px;
-    height: auto;
+    height: 298px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,6 +40,23 @@ section.section-choice {
 
 .box div h2 {
     margin: 0px;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 16px 12px;
+}
+
+.score img {
+    width: 60px;
+    height: auto;
+}
+
+.computer-score img {
+    transform: translate(0px, 11px);
 }
 
 .selection {
