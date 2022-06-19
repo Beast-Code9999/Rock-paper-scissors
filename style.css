@@ -69,7 +69,7 @@ section.section-choice {
 }
 
 .player-selection div:active {
-    background-color: rgba(217, 255, 0, 0.938);
+    background-color: rgba(0, 153, 255, 0.904);
     display: flex;
     flex-direction: column;
     justify-content: center;
