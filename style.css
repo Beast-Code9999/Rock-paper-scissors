@@ -68,9 +68,18 @@ section.section-choice {
 .selection div {
     background-color: white;
     padding: 8px;
-    box-shadow: 10px 10px 3px rgb(0, 255, 136);
+    box-shadow: 10px 10px 3px black;
     border-radius: 5px;
 }
+
+.selection div.show-player-selection {
+    background-color: rgba(202, 44, 60, 0.795);
+}
+
+.selection div.show-player-selection:hover{
+    background-color: rgba(202, 44, 60, 0.795);
+}
+
 
 .selection div {
     display: flex;
@@ -89,11 +98,13 @@ section.section-choice {
     transition-duration: 0.1s;
     transform: translate(2%, 4%);
     transition-timing-function: ease-in;
-    box-shadow: 8px 8px 3px rgb(0, 255, 136);
+    box-shadow: 8px 8px 3px black;
 }
 
+
+
 .player-selection div:active {
-    background-color: rgba(0, 153, 255, 0.904);
+    background-color: rgba(202, 44, 60, 0.795);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,7 +113,7 @@ section.section-choice {
     transition-duration: 0.1s;
     transform: translate(4%, 6%);
     transition-timing-function: ease-in;
-    box-shadow: 6px 6px 3px rgb(0, 255, 136);
+    box-shadow: 6px 6px 3px black;
 }
 
 .selection div p {
@@ -125,7 +136,14 @@ section.section-result {
     background-color: rgb(37, 53, 44)
 }
 
-section.section-result div h1 {
+section.section-result div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+section.section-result div h1, section.section-result div p {
     color: white;
     margin-top: 40px;
 }
