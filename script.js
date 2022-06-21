@@ -1,9 +1,5 @@
+// randomise choice for computer
 let computerOptions = ["Rock", "Paper", "Scissors"];
-const playerSelection = document.getElementById('selection').addEventListener('click', function() {
-    console.log("you selected: ", this.value);
-})
-
-console.log(playerSelection);
 
 let mathRandom = () => {
     return Math.floor(Math.random() * 3);
@@ -14,3 +10,25 @@ let computerPlay = () => {
 }
 
 console.log(computerPlay())
+
+
+
+
+// select all id using document.selectElementById()
+const rockBtn = document.getElementById('rockBtn');
+const paperBtn = document.getElementById('paperBtn');
+const scissorsBtn = document.getElementById('scissorsBtn');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
