@@ -28,7 +28,7 @@ section.section-choice {
 
 .box {
     background: rgba(255, 255, 255, 0.3);
-    padding: 32px;
+    padding: 64px 32px;
     width: 500px;
     height: 298px;
     display: flex;
@@ -72,6 +72,13 @@ section.section-choice {
     border-radius: 5px;
 }
 
+.selection div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .player-selection div:hover {
     background-color: white;
     display: flex;
@@ -96,6 +103,11 @@ section.section-choice {
     transform: translate(4%, 6%);
     transition-timing-function: ease-in;
     box-shadow: 6px 6px 3px rgb(0, 255, 136);
+}
+
+.selection div p {
+    color: black;
+    font-weight: bolder;
 }
 
 .selection img {
