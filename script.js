@@ -31,7 +31,6 @@ let computerPlay = () => {
     return computerOptions[mathRandom()];
 }
 
-console.log(computerPlay())
 
 
 
@@ -57,8 +56,26 @@ playerBtn.forEach(function(button){
 
 // fuunctoin to add computer css selection
 function addComputerSelection() {
-    
+    console.log(computerSelection);
+    if(computerSelection == 'rock'){
+        compRockBtn.classList.add('show-computer-selection');
+    } else {
+        compRockBtn.classList.remove('show-computer-selection');
+    }
+
+    if(computerSelection == 'paper'){
+        compPaperBtn.classList.add('show-computer-selection');
+    } else {
+        compPaperBtn.classList.remove('show-computer-selection');
+    }
+
+    if(computerSelection == 'scissors'){
+        compScissorsBtn.classList.add('show-computer-selection');
+    } else {
+        compScissorsBtn.classList.remove('show-computer-selection');
+    }
 }
+
 
 
 // now find a way to return a string value through clicks
@@ -77,7 +94,8 @@ playerBtn.forEach(function(button) {
 //write a function that plays a single round of rock paper scissors
 function playRound(playerSelection, compPaperBtn) {
     computerSelection = computerPlay().toLowerCase();
-    console.log(computerSelection)
+    // console.log(computerSelection);
+    addComputerSelection();
 }
 
 
