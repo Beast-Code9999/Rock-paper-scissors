@@ -1,3 +1,8 @@
+// selections
+let playerSelection;
+let computerSelection;
+
+
 // select all id using document.selectElementById()
 const rockBtn = document.getElementById('rockBtn');
 const paperBtn = document.getElementById('paperBtn');
@@ -49,24 +54,37 @@ playerBtn.forEach(function(button){
 
 })
 
-rockBtn.addEventListener('click', function(){
+
+// fuunctoin to add computer css selection
+function addComputerSelection() {
     
+}
+
+
+// now find a way to return a string value through clicks
+// where all function sits
+playerBtn.forEach(function(button) {
+    button.addEventListener('click', () => {
+        playerSelection = button.getAttribute('value').toLowerCase();
+        console.log(playerSelection)
+        playRound(playerSelection, computerSelection);
+    })
 })
 
-paperBtn.addEventListener('click', function(current){
-    current.currentTarget.childNodes[1].textContent
-})
 
 
 
-scissorsBtn.addEventListener('click', function(){
-    
-})
+//write a function that plays a single round of rock paper scissors
+function playRound(playerSelection, compPaperBtn) {
+    computerSelection = computerPlay().toLowerCase();
+    console.log(computerSelection)
+}
 
 
 
 
 
+//write a game function to declare winner and loser
 
 
 

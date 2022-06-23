@@ -72,6 +72,19 @@ section.section-choice {
     border-radius: 5px;
 }
 
+.selection div.show-computer-selection {
+    background-color: rgba(41, 59, 192, 0.774);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    transition-duration: 0.1s;
+    transform: translate(4%, 6%);
+    transition-timing-function: ease-in;
+    box-shadow: 6px 6px 3px black;
+}
+
 .selection div.show-player-selection {
     background-color: rgba(202, 44, 60, 0.795);
 }
