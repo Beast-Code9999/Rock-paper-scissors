@@ -1,6 +1,8 @@
 // selections
 let playerSelection;
 let computerSelection;
+let playerScoreCount;
+let computerScoreCount;
 
 
 // select all id using document.selectElementById()
@@ -18,8 +20,6 @@ const resultPlayerImg = document.getElementById('resultPlayerImg');
 const resultComputerImg = document.getElementById('resultComputerImg');
 
 
-
-
 // randomise choice for computer
 let computerOptions = ["Rock", "Paper", "Scissors"];
 
@@ -30,9 +30,6 @@ let mathRandom = () => {
 let computerPlay = () => {
     return computerOptions[mathRandom()];
 }
-
-
-
 
 
 // now write a function to listen for player selection
@@ -77,33 +74,53 @@ function addComputerSelection() {
 }
 
 
-
 // now find a way to return a string value through clicks
 // where all function sits
 playerBtn.forEach(function(button) {
     button.addEventListener('click', () => {
         playerSelection = button.getAttribute('value').toLowerCase();
+        computerSelection = computerPlay().toLowerCase();        
         console.log(playerSelection)
         playRound(playerSelection, computerSelection);
     })
 })
 
 
-
-
-//write a function that plays a single round of rock paper scissors
-function playRound(playerSelection, compPaperBtn) {
-    computerSelection = computerPlay().toLowerCase();
-    // console.log(computerSelection);
-    addComputerSelection();
+// write a function for score 
+function changeScore(playScore="Score: uwu", compScore="Score: uwu"){
+    playerScore.textContent = playScore;
+    comptuterScore.textContent = compScore;
 }
 
 
 
+// write a function for message
+function changeMessage(string= "What", string2= "is up"){
+    message.textContent = string;
+    whyMessage.textContent = string2;
+}
+
+
+// Write a function to change the result image
+
+
+//write a function that plays a single round of rock paper scissors
+function playRound(playerChoice, computerChoice) {
+    // console.log(computerSelection);
+    addComputerSelection();
+    if(playerChoice === computerChoice){
+       
+
+    }
+}
 
 
 //write a game function to declare winner and loser
-
+function game(){
+    for(let i = 0; i < 5; i++){
+       playRound();
+    }
+}
 
 
 
