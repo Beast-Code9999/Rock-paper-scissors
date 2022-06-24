@@ -16,8 +16,8 @@ const playerScore = document.getElementById('playerScore');
 const comptuterScore = document.getElementById('computerScore')
 const message = document.getElementById('message');
 const whyMessage = document.getElementById('whyMessage');
-const resultPlayerImg = document.getElementById('resultPlayerImg');
-const resultComputerImg = document.getElementById('resultComputerImg');
+const resultPlayerImg = document.querySelector('.resultPlayerImg');
+const resultComputerImg = document.querySelector('.resultComputerImg');
 
 
 // randomise choice for computer
@@ -53,7 +53,7 @@ playerBtn.forEach(function(button){
 
 // fuunctoin to add computer css selection
 function addComputerSelection() {
-    console.log(computerSelection);
+    // console.log(computerSelection);
     if(computerSelection == 'rock'){
         compRockBtn.classList.add('show-computer-selection');
     } else {
@@ -80,7 +80,7 @@ playerBtn.forEach(function(button) {
     button.addEventListener('click', () => {
         playerSelection = button.getAttribute('value').toLowerCase();
         computerSelection = computerPlay().toLowerCase();        
-        console.log(playerSelection)
+        // console.log(playerSelection)
         playRound(playerSelection, computerSelection);
     })
 })
@@ -102,6 +102,15 @@ function changeMessage(string= "What", string2= "is up"){
 
 
 // Write a function to change the result image
+function changeImage(playerImage, computerImage) {
+    resultPlayerImg.src = `./img/${playerImage}.png`;
+    resultComputerImg.src = `./img/${computerImage}.png`
+}
+
+
+// below
+
+
 
 
 //write a function that plays a single round of rock paper scissors
@@ -109,7 +118,7 @@ function playRound(playerChoice, computerChoice) {
     // console.log(computerSelection);
     addComputerSelection();
     if(playerChoice === computerChoice){
-       
+       changeImage(playerChoice, computerChoice);
 
     }
 }
