@@ -18,6 +18,8 @@ const message = document.getElementById('message');
 const whyMessage = document.getElementById('whyMessage');
 const resultPlayerImg = document.querySelector('.resultPlayerImg');
 const resultComputerImg = document.querySelector('.resultComputerImg');
+const colorPlayerImage = document.querySelector('.result-img-player');
+const colorComputerImage = document.querySelector('.result-img-computer')
 
 
 // randomise choice for computer
@@ -108,7 +110,26 @@ function changeImage(playerImage, computerImage) {
 }
 
 
-// below
+// below is a function to chnage the color of image depends on whether on not they win
+function playerWinColor(playerWin){
+    if(playerWin === true){
+        colorPlayerImage.classList.add('show-correct-result');
+        colorPlayerImage.classList.remove('show-wrong-result')
+        colorComputerImage.classList.add('show-wrong-result');
+        colorComputerImage.classList.remove('show-correct-result');
+    } else{
+        colorPlayerImage.classList.add('show-wrong-result');
+        colorPlayerImage.classList.remove('show-correct-result')
+        colorComputerImage.classList.add('show-correct-result');
+        colorComputerImage.classList.remove('show-wrong-result');
+    }
+    if(playerWin === "tie") {
+        colorPlayerImage.classList.remove('show-wrong-result')
+        colorComputerImage.classList.remove('show-correct-result');
+        colorPlayerImage.classList.remove('show-correct-result')
+        colorComputerImage.classList.remove('show-wrong-result');
+    }
+}
 
 
 
@@ -119,8 +140,24 @@ function playRound(playerChoice, computerChoice) {
     addComputerSelection();
     if(playerChoice === computerChoice){
        changeImage(playerChoice, computerChoice);
-
+       changeMessage("IT'S A TIE!", "TRY AGAIN");
+       playerWinColor("tie")
     }
+    else if(
+        (playerChoice === "rock" && computerChoice === "scissors") ||
+        (playerChoice === "paper" && computerChoice === "rock") ||
+        (playerChoice === "scissors" && computerChoice === "paper") 
+        ) {
+            changeImage(playerChoice, computerChoice);
+            playerWinColor(true);
+        }
+    else if (
+        (playerChoice === "scissors" && computerChoice === "rock") ||
+        (playerChoice === "rock" && computerChoice === "paper") ||
+        (playerChoice === "paper" && computerChoice === "scissors") 
+        ) {
+            changeImage(playerChoice, computerChoice);
+        }
 }
 
 

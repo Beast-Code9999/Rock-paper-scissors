@@ -173,9 +173,18 @@ section.section-result div h1, section.section-result div p {
 }
 
 .result-img-container div {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 44px 16px;
     border-radius: 8px;
+}
+
+
+.result-img-container .show-correct-result {
+    background-color: rgb(64, 255, 64);
+}
+
+.result-img-container .show-wrong-result {
+    background-color: rgb(255, 72, 72);
 }
 
 .result-img-computer img {
@@ -187,3 +196,4 @@ section.section-result div h1, section.section-result div p {
     width: 262.5px;
     height: auto;
 }
+
