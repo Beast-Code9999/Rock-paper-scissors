@@ -218,16 +218,16 @@ function playRound(playerChoice, computerChoice) {
             changeScore(`SCORE: ${playerScoreCount}`, `SCORE: ${computerScoreCount}`);
             switch (computerScoreCount) {
                 case 1:
-                    changeMessage("YOU LOST!", `${playerChoice.toUpperCase()} BEATS ${computerChoice.toUpperCase()}, BUT THAT'S OKAY, LET'S TRY AGAIN`);
+                    changeMessage("YOU LOST!", `${computerChoice.toUpperCase()} BEATS ${playerChoice.toUpperCase()}, BUT THAT'S OKAY, LET'S TRY AGAIN`);
                     break;
                 case 2: 
-                    changeMessage("LOSS IS NECESSARY FOR GROWTH", `${playerChoice.toUpperCase()} BEATS ${computerChoice.toUpperCase()}, KEEP TRYING`);
+                    changeMessage("LOSS IS NECESSARY FOR GROWTH", `${computerChoice.toUpperCase()} BEATS ${playerChoice.toUpperCase()}, KEEP TRYING`);
                     break;
                 case 3:
-                    changeMessage("ANOTHER LOSS", `${playerChoice.toUpperCase()} BEATS ${computerChoice.toUpperCase()}, BUT DO NOT GIVE UP`);
+                    changeMessage("ANOTHER LOSS", `${computerChoice.toUpperCase()} BEATS ${playerChoice.toUpperCase()}, BUT DO NOT GIVE UP`);
                     break;
                 case 4: 
-                    changeMessage("ONE MORE LOSS AND YOU ARE DONE", `${playerChoice.toUpperCase()} BEATS ${computerChoice.toUpperCase()}, MAY THE FORCE BE WITH YOU`);
+                    changeMessage("ONE MORE LOSS AND YOU ARE DONE", `${computerChoice.toUpperCase()} BEATS ${playerChoice.toUpperCase()}, MAY THE FORCE BE WITH YOU`);
                     break;
                 case 5:
                     winner = "computer"
