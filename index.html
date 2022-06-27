@@ -9,75 +9,92 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header>
-        <h1>Rock Paper Scissors</h1>
-    </header>
-    <section class="section-choice">
-        <div class="player box">
-            <div>
-                <h2>PLAYER</h2>
+    <audio id="laseSound" src="./sound/click.mp3"></audio>
+    <audio id="misisonPassed" src="./sound/Mission passed.mp3"></audio>
+    <audio id="youDied" src="./sound/Dark souls YOU DIED.mp3"></audio>
+    <main id="main">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+        </header>
+        <section class="section-message">
+            <div class="topMessage">
+                <h1 id="message">LET'S START!</h1>
+                <p id="whyMessage">MAY THE FORCE BE WITH YOU</p>
             </div>
-            <div class="score">
-                <img src="./img/player.png" alt="player-icon">
+        </section>
+        <section class="section-choice">
+            <div class="player box">
                 <div>
-                    <p id="playerScore">score: </p>
+                    <h2>PLAYER</h2>
+                </div>
+                <div class="score">
+                    <img src="./img/player.png" alt="player-icon">
+                    <div>
+                        <p class="scoreDisplay" id="playerScore">SCORE: 0</p>
+                    </div>
+                </div>
+                <div class="player-selection selection" id="selection">
+                    <div class="playerBtn rock" value="Rock" id="rockBtn">
+                        <p>Rock</p>
+                        <img src="./img/rock.png" alt="rock">
+                    </div>
+                    <div class="playerBtn paper" value="Paper" id="paperBtn">
+                        <p>Paper</p>
+                        <img src="./img/paper.png" alt="paper">
+                    </div>
+                    <div class="playerBtn scissors" value="Scissors" id="scissorsBtn">
+                        <p>Scissors</p>
+                        <img src="./img/scissors.png" alt="scissors">
+                    </div>
                 </div>
             </div>
-            <div class="player-selection selection" id="selection">
-                <div class="playerBtn rock" value="Rock" id="rockBtn">
-                    <p>Rock</p>
-                    <img src="./img/rock.png" alt="rock">
-                </div>
-                <div class="playerBtn paper" value="Paper" id="paperBtn">
-                    <p>Paper</p>
-                    <img src="./img/paper.png" alt="paper">
-                </div>
-                <div class="playerBtn scissors" value="Scissors" id="scissorsBtn">
-                    <p>Scissors</p>
-                    <img src="./img/scissors.png" alt="scissors">
-                </div>
-            </div>
-        </div>
-        <div class="computer box">
-            <div>
-                <h2>COMPUTER</h2>
-            </div>
-            <div class="score computer-score">
-                <img src="./img/computer.png" alt="computer-icon">
+            <div class="computer box">
                 <div>
-                    <p id="computerScore">score: </p>
+                    <h2>COMPUTER</h2>
+                </div>
+                <div class="score computer-score">
+                    <img src="./img/computer.png" alt="computer-icon">
+                    <div>
+                        <p class="scoreDisplay" id="computerScore">SCORE: 0</p>
+                    </div>
+                </div>
+                <div class="selection">
+                    <div class="rock computerBtn" id="compRockBtn">
+                        <p>Rock</p>
+                        <img src="./img/rock.png" alt="rock">
+                    </div>
+                    <div class="paper computerBtn" id="compPaperBtn">
+                        <p>Paper</p>
+                        <img src="./img/paper.png" alt="paper">
+                    </div>
+                    <div class="scissors computerBtn" id="compScissorsBtn">
+                        <p>Paper</p>
+                        <img src="./img/scissors.png" alt="scissors">
+                    </div>
                 </div>
             </div>
-            <div class="selection">
-                <div class="rock computerBtn" id="compRockBtn">
-                    <p>Rock</p>
-                    <img src="./img/rock.png" alt="rock">
+        </section>
+        <section class="section-result">
+            <div class="result-img-container" id="resultContainer">
+                <div class="result-img-player" >
+                    <img id="big big-player" class="resultPlayerImg" src="./img/paper.png" alt="paper">
                 </div>
-                <div class="paper computerBtn" id="compPaperBtn">
-                    <p>Paper</p>
-                    <img src="./img/paper.png" alt="paper">
-                </div>
-                <div class="scissors computerBtn" id="compScissorsBtn">
-                    <p>Paper</p>
-                    <img src="./img/scissors.png" alt="scissors">
+                <div class="result-img-computer" >
+                    <img id="big big-computer" class="resultComputerImg" src="img/rock.png" alt="rock">
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="section-result">
+        </section>
+    </main>
+    <div class="ending hide-content" id="ending">
         <div>
-            <h1 id="message">You won!</h1>
-            <p id="whyMessage">Paper beats rock</p>
+            <h1 class="fancy">You won, Congratulation wonderful person</h1>
         </div>
-        <div class="result-img-container">
-            <div class="result-img-player" >
-                <img id="big big-player" class="resultPlayerImg" src="./img/paper.png" alt="paper">
-            </div>
-            <div class="result-img-computer" >
-                <img id="big big-computer" class="resultComputerImg" src="img/rock.png" alt="rock">
-            </div>
+        <div class="playAgainBtn hide-content">
+            <button>
+                Play Again
+            </button>
         </div>
-    </section>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
